@@ -1,12 +1,20 @@
 var React = require('react');
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
+var MainContainer = require('../containers/MainContainer');
 
 var Home = React.createClass({
     render : function () {
         return(
-            <div>
-                Hello From Home components
-
-            </div>
+            <MainContainer >
+                <h1>Github Battble</h1>
+                <p className="lead">Some fancy motto</p>
+                <Link to="/playerOne">
+                    <button type="button" className="btn btn-lg btn-success">
+                        Get Started
+                    </button>
+                </Link>
+            </MainContainer>
         )
     }
 });
